@@ -54,8 +54,6 @@ export class CheckoutPage
     }
 
     async assertSuccess() {
-        await this.locatePurchaseButton().click();
-
         await expect(this.locateSuccessMessage()).toBeVisible();
     }
 

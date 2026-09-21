@@ -11,16 +11,11 @@ export class CartPage
 
     async proceedToCheckout(productName: string) 
     {
-    const isItemExistInCart = await this.page.getByRole('link', { name: productName }).isVisible();
+    const product = this.page.getByRole("link", { name: productName });
 
-    if (isItemExistInCart) 
-        {
+        await expect(product).toBeVisible();
+
         await this.locateCheckoutButton().click();
-    } 
-    else 
-        {
-        throw new Error(`Item "${productName}" not found in cart`);
-    }
 }
 }
 
