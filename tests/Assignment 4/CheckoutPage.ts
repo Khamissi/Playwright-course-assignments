@@ -34,7 +34,9 @@ export class CheckoutPage
 
     async acceptTermsAndConditions()
     {
-        await this.locateTermsAndConditionsCheckbox().check({ force: true });
+        const checkbox = this.locateTermsAndConditionsCheckbox();
+        await checkbox.click({ force: true });
+        await expect(checkbox).toBeChecked();
     }
 
     private locatePurchaseButton()
