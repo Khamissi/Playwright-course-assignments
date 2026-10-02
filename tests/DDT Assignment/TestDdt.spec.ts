@@ -36,7 +36,7 @@ test.describe('Test Just log in', () =>
     });
 });
 
-test.describe.only('Test add product to cart', () => 
+test.describe('Test add product to cart', () => 
 {
     for (const data of ProductData) {
         test(`Add ${data.productName} to cart`, async ({ page }) => {
@@ -46,7 +46,7 @@ test.describe.only('Test add product to cart', () =>
             await testLogInObject.navigateTo('https://rahulshettyacademy.com/client/#/auth/login');
             await testLogInObject.login(data.email, data.password);
             await expect(page).toHaveURL('https://rahulshettyacademy.com/client/#/dashboard/dash'); 
-            await testShopPageObject.addProductToCart(data.productName);
+            await testShopPageObject.addProductToCart(data.productName);await page.getByRole('button', { name: 'Checkout❯' }).click();
             await testCheckOutObject.completePurchase({
                 cardNumber: data.cardNumber,
                 month: data.expiryMonth,
