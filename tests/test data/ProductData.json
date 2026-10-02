@@ -1,0 +1,56 @@
+[
+  {
+    "email": "ahmedelkhafgdfgmissi@yahoo.com",
+    "password": "Q@*V7LSFuZVjCP8",
+    "TestCaseID": "Valid product name",
+    "productName": "ZARA COAT 3",
+    "cardNumber": "1234-5678-9012-3456",
+    "expiryMonth": "12",
+    "expiryYear": "27",
+    "cvv": "123",
+    "cardHolderName": "Ahmed Elkhamissi",
+    "coountryPrefix": "Egy",
+    "country": "Egypt"
+  },
+  {
+    "email": "ahmedelkhafgdfgmissi@yahoo.com",
+    "password": "Q@*V7LSFuZVjCP8",
+    "TestCaseID": "Valid product name",
+    "productName": "ADIDAS ORIGINAL",
+    "cardNumber": "1234-5678-9012-3456",
+    "expiryMonth": "12",
+    "expiryYear": "27",
+    "cvv": "123",
+    "cardHolderName": "Ahmed Elkhamissi",
+    "coountryPrefix": "Egy",
+    "country": "Egypt"
+  },
+  {
+    "email": "ahmedelkhafgdfgmissi@yahoo.com",
+    "password": "Q@*V7LSFuZVjCP8",    
+    "TestCaseID": "Valid product name",
+    "productName": "iphone 13 pro",
+    "cardNumber": "1234-5678-9012-3456",
+    "expiryMonth": "12",
+    "expiryYear": "27",
+    "cvv": "123",
+    "cardHolderName": "Ahmed Elkhamissi",
+    "coountryPrefix": "Egy",
+    "country": "Egypt"
+  },
+  {
+    "email": "ahmedelkhafgdfgmissi@yahoo.com",
+    "password": "Q@*V7LSFuZVjCP8",    
+    "TestCaseID": "Invalid product name",
+    "productName": "Puma shoes",
+    "cardNumber": "1234-5678-9012-3456",
+    "expiryMonth": "12",
+    "expiryYear": "27",
+    "cvv": "123",
+    "cardHolderName": "Ahmed Elkhamissi",
+    "coountryPrefix": "Egy",
+    "country": "Egypt"
+}
+
+
+]
