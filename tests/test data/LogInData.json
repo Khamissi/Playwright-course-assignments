@@ -1,0 +1,22 @@
+[
+  {
+    "TestCaseID": "Valid email and password",
+    "email": "ahmedelkhafgdfgmissi@yahoo.com",
+    "password": "Q@*V7LSFuZVjCP8"
+  },
+  {
+    "TestCaseID": "Empty email",
+    "email": "ahmedelkhafgdfgmissi@yahoo.com",
+    "password": ""
+  },
+  {
+    "TestCaseID": "Empty password",
+    "email": "",
+    "password": "Q@*V7LSFuZVjCP8"
+  }, 
+  {
+    "TestCaseID": "Invalid credentials",
+    "email": "ahmedelkhafgdfgmissi@yahoo.com",
+    "password": "Q@*V7LSFgfhgfhgfuZVjCP8"
+  }
+]
