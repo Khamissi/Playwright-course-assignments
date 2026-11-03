@@ -4,6 +4,7 @@ import { LogInPage } from './LogIn';
 import { ShopPage } from './shopPage';
 import ProductData from '../test data/ProductData.json';
 import {CheckOut} from './CheckOut';
+import Urls from '../test data/Urls.json';
 import path from 'path';
 
 test.describe('Test Just log in', () => 
@@ -11,9 +12,9 @@ test.describe('Test Just log in', () =>
     for (const data of LogInData) {
         test(`Log in with ${data.TestCaseID}`, async ({ page }) => {
             const testLogInObject = new LogInPage(page);
-            await testLogInObject.navigateTo('https://rahulshettyacademy.com/client/#/auth/login');
+            await testLogInObject.navigateTo(Urls[0].RauhShettyLogInRegisterUrl);
             await testLogInObject.login(data.email, data.password);
-            await expect(page).toHaveURL('https://rahulshettyacademy.com/client/#/dashboard/dash'); 
+            await expect(page).toHaveURL(Urls[0].RauhShettyShopUrl); 
         });
     }
 
