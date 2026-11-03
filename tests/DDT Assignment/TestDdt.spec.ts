@@ -7,14 +7,32 @@ import {CheckOut} from './CheckOut';
 import Urls from '../test data/Urls.json';
 import path from 'path';
 
-test.describe('Test Just log in', () => 
-{
+test.describe('Test Just log in', () => {
+
     for (const data of LogInData) {
+
         test(`Log in with ${data.TestCaseID}`, async ({ page }) => {
+
             const testLogInObject = new LogInPage(page);
-            await testLogInObject.navigateTo(Urls[0].RauhShettyLogInRegisterUrl);
+
+            await testLogInObject.navigateTo(
+                Urls.RauhShettyLogInRegisterUrl
+            );
+
             await testLogInObject.login(data.email, data.password);
-            await expect(page).toHaveURL(Urls[0].RauhShettyShopUrl); 
+
+            if (data.expectedResult === 'success') {
+
+                await expect(page).toHaveURL(
+                    Urls.RauhShettyShopUrl
+                );
+
+            } else {
+
+                await expect(page).toHaveURL(
+                    Urls.RauhShettyLogInRegisterUrl
+                );
+            }
         });
     }
 
@@ -28,6 +46,7 @@ test.describe('Test Just log in', () =>
             'LogIn',
             `${screenshotName}.png`
         );
+
         console.log(`Screenshot name: ${screenshotName}`);
 
         await page.screenshot({
@@ -47,15 +66,16 @@ test.describe('Test add product to cart', () =>
             await testLogInObject.navigateTo('https://rahulshettyacademy.com/client/#/auth/login');
             await testLogInObject.login(data.email, data.password);
             await expect(page).toHaveURL('https://rahulshettyacademy.com/client/#/dashboard/dash'); 
-            await testShopPageObject.addProductToCart(data.productName);await page.getByRole('button', { name: 'Checkout❯' }).click();
+            await testShopPageObject.addProductToCart(data.productName);
+            await page.goto('https://rahulshettyacademy.com/client/#/dashboard/cart');
             await testCheckOutObject.completePurchase({
                 cardNumber: data.cardNumber,
                 month: data.expiryMonth,
                 year: data.expiryYear,
                 cvv: data.cvv,
                 cardHolderName: data.cardHolderName,
-                abstractCountryName: data.coountryPrefix,
-                fullCountryName: data.country
+                abstractCountryName: data.abstractCountryName,
+                fullCountryName: data.fullCountryName
             });
 
         });
