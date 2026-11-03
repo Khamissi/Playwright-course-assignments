@@ -10,11 +10,11 @@ test('test', async ({page}) => {
   const cartZaraPage = new CartZaraPage(page);
   const firstName = 'Ahmed';
   const lastName = 'Elkhamissi';
-  const email = 'kahmississ@mail.com';
+  const email = 'khammaailll@mail.com';
   const password = 'Password123!';
   const confirmPassword = 'Password123!'; 
   const occupation = 'Engineer';
-  const phone = '9308224429';
+  const phone = '8573238893';
   const gender = 'Male';
 
 

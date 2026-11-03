@@ -22,7 +22,7 @@ export class ShopPage
     }   
 
     private locateCheckOutButton() {
-        return this.page.getByRole('button', { name: 'Checkout' });
+        return this.page.getByRole('button', { name: /checkout/i });
     }
 
     async clickCheckOutButton() {
