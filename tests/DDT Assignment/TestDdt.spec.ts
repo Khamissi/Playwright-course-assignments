@@ -67,7 +67,7 @@ test.describe('Test add product to cart', () =>
             await testLogInObject.login(data.email, data.password);
             await expect(page).toHaveURL('https://rahulshettyacademy.com/client/#/dashboard/dash'); 
             await testShopPageObject.addProductToCart(data.productName);
-            await page.goto('https://rahulshettyacademy.com/client/#/dashboard/cart');
+            //await page.goto('https://rahulshettyacademy.com/client/#/dashboard/cart');
             await testCheckOutObject.completePurchase({
                 cardNumber: data.cardNumber,
                 month: data.expiryMonth,
